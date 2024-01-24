@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "proto:install": "npm i git+https://github.com/hardikshakya/quickshop-shared-proto.git",
     "proto:order": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/quickshop-shared-proto/proto --ts_proto_out=src/order/proto/ node_modules/quickshop-shared-proto/proto/order.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
-    "proto:product": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/quickshop-shared-proto/proto --ts_proto_out=src/order/ node_modules/quickshop-shared-proto/proto/product.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
+    "proto:product": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/quickshop-shared-proto/proto --ts_proto_out=src/order/proto/ node_modules/quickshop-shared-proto/proto/product.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
     "proto:all": "npm run proto:order && npm run proto:product"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "class-validator": "^0.14.1",
     "dotenv": "^16.3.2",
     "pg": "^8.11.3",
+    "quickshop-shared-proto": "github:hardikshakya/quickshop-shared-proto",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
     "typeorm": "^0.3.19"
